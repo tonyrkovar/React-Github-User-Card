@@ -31,8 +31,6 @@ class App extends React.Component {
       <div className="App">
         <GithubUser />
         <GithubCards key={this.state.id} followers={this.state.followers} />
-        {console.log('This is this.state', this.state)}
-        <p> GITHUB USER CARDS</p>
       </div>
     );
   }
