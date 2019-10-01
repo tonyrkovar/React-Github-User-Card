@@ -10,7 +10,6 @@ class GithubUser extends React.Component {
         axios
             .get('https://api.github.com/users/tonyrkovar')
             .then(res => {
-                // console.log('This is wrong', res)
                 this.setState({
                     user: res.data
                 })
@@ -21,13 +20,13 @@ class GithubUser extends React.Component {
     }
 
     render() {
-        console.log("this is state in GHU.js", this.state.user)
         return (
             <>
                 <div key={this.state.user.id} className='cards'>
                     <img src={this.state.user.avatar_url} alt={this.state.user.login} className='photos'></img>
                     <p>{this.state.user.login}</p>
                     <p>Repositories: <a href={`https://github.com/${this.state.user.login}?tab=repositories`}>https://github.com/{this.state.user.login}?tab=repositories</a></p>
+                    <img src={`http://ghchart.rshah.org/${this.state.user.login}`}></img>
                 </div>
             </>
         )

@@ -19,9 +19,13 @@
   justify-content: space-around;
 }
 
+.App P{
+  flex-direction: column;
+}
+
 .cards{
   margin: 0 auto;
-  width: 90%;
+  width: auto;
   /* margin: 10px 0; */
   margin-top: 10px;
 }
